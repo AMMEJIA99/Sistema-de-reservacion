@@ -1,14 +1,22 @@
 import Image from "next/image";
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Banner />
+      <HeroSection />
 
       {/* Sección de servicios */}
-      <section className="py-16 bg-white">
+      <section
+        className="relative py-16 bg-[#f5f1ea]"
+        style={{
+          backgroundImage: 'url("/imagenes/textura.jpg")',
+          backgroundSize: "cover",
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -88,8 +96,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }
