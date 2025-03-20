@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { useEffect, useRef, useState } from "react";
+import { Lamp } from "@/components/features/lamp";
 
 export default function Home() {
   return (
@@ -9,65 +10,61 @@ export default function Home() {
       <Navbar />
       <HeroSection />
 
-      {/* Sección de servicios */}
-      <section
-        className="relative py-16 bg-[#f5f1ea]"
-        style={{
-          backgroundImage: 'url("/imagenes/textura.jpg")',
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Nuestros Servicios
-            </h2>
-            <p className="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-              Ofrecemos soluciones de alta calidad adaptadas a tus necesidades
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {/* Tarjeta de servicio 1 */}
-            <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Diseño Web
-                </h3>
-                <p className="text-gray-600">
-                  Creamos diseños modernos y atractivos que capturan la esencia
-                  de tu marca.
-                </p>
-              </div>
-            </div>
-
-            {/* Tarjeta de servicio 2 */}
-            <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Desarrollo Frontend
-                </h3>
-                <p className="text-gray-600">
-                  Implementamos interfaces de usuario responsivas con las
-                  últimas tecnologías.
-                </p>
-              </div>
-            </div>
-
-            {/* Tarjeta de servicio 3 */}
-            <div className="bg-gray-50 rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  APIs Backend
-                </h3>
-                <p className="text-gray-600">
-                  Desarrollamos APIs robustas y escalables para potenciar tus
-                  aplicaciones.
-                </p>
-              </div>
+      {/* Sección de servicios con fondo ajustado para el componente Lamp */}
+      <section className="bg-[#020203] py-0">
+        <Lamp>
+          {/* Tarjeta de servicio 1 */}
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Prácticas Corporales
+              </h3>
+              <p className="text-slate-300">
+                ● Yoga para todos los niveles <br></br>● Yoga Prenatal <br></br>
+                ● Pranayama (técnicas de respiración)
+              </p>
             </div>
           </div>
-        </div>
+
+          {/* Tarjeta de servicio 2 */}
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Acompañamiento Personal
+              </h3>
+              <p className="text-slate-300">
+                ● Coaching de bienestar integral <br></br>● Acompañamiento en
+                crisis vitales <br></br>● Programa de Reducción de Estrés
+              </p>
+            </div>
+          </div>
+
+          {/* Tarjeta de servicio 3 */}
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Prácticas Devocionales
+              </h3>
+              <p className="text-slate-300">
+                ● Chanting y recitación de mantras <br></br>● Meditación guiada{" "}
+                <br></br>● Retiros espirituales
+              </p>
+            </div>
+          </div>
+
+          {/* Tarjeta de servicio 4 */}
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold text-white mb-2">
+                Conocimiento y Filosofía
+              </h3>
+              <p className="text-slate-300">
+                ● Talleres de filosofía yóguica <br></br> ● Introducción al Ayurveda <br></br>
+                ●Psicología Positiva y Holística
+              </p>
+            </div>
+          </div>
+        </Lamp>
       </section>
 
       {/* Sección Acerca de Nosotros */}
