@@ -14,7 +14,7 @@ export function Lamp({children}) {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-15 bg-gradient-to-br from-slate-100 to-slate-200 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl"
+        className="mt-12 bg-gradient-to-br from-slate-100 to-slate-200 py-4 bg-clip-text text-center text-3xl font-medium tracking-tight text-transparent md:text-6xl"
       >
 Nuestros Servicios      </motion.h1>
 
@@ -27,7 +27,7 @@ Nuestros Servicios      </motion.h1>
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="mt-12 grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-full max-w-7xl mx-auto"
+        className="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-full max-w-7xl mx-auto px-5"
       >
         {children}
       </motion.div>

@@ -1,46 +1,94 @@
 import Image from "next/image";
-import { NavbarDemo } from "@/components/Navbar";
+import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { useEffect, useRef, useState } from "react";
 import { Lamp } from "@/components/features/lamp";
+import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 
 export default function Home() {
   return (
     <>
-      <NavbarDemo/>
+      <Navbar />
       <HeroSection />
 
+      {/* Div de transición con degradado */}
+      <div className="relative w-full h-28 -mt-28">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent  via-green-900/30 to-[#2C3E50] w-full h-full z-30"></div>
+      </div>
+
       {/* Sección de servicios con fondo ajustado para el componente Lamp */}
-      <section className="bg-[#020203] py-0">
+      <section id="servicios" className="  py-0 relative z-70">
         <Lamp>
           {/* Tarjeta de servicio 1 */}
-          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-br-4xl rounded-tl-4xl  shadow-md overflow-hidden border border-white/20">
+            <div className="h-45 w-full overflow-hidden p-0">
+              <img
+                src="./imagenes/Prenatal.jpg"
+                alt="Prácticas Corporales"
+                className="w-full h-full object-cover rounded-tl-4xl rounded-br-3xl hover:scale-105 "
+              />
+            </div>
+            {/* Div de transición con degradado */}
+            <div className="relative w-full h-35 -mt-35">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent  via-blue-800/30 to-[#0a1f1c] w-full h-full z-30"></div>
+            </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold text-white mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2 ">
                 Prácticas Corporales
               </h3>
-              <p className="text-slate-300">
+              <p className="text-slate-300 text-m">
                 ● Yoga para todos los niveles <br></br>● Yoga Prenatal <br></br>
                 ● Pranayama (técnicas de respiración)
               </p>
+              <button
+                className="bg-amber-300 text-white 
+                   mt-3 ml-28 rounded-tl-4xl rounded-br-3xl w-28 h-8 
+                   whitespace-nowrap text-xs 
+                   transition-all duration-300 transform hover:scale-105 
+                   shadow-md"
+              >
+                Mas informacion
+              </button>
             </div>
           </div>
 
           {/* Tarjeta de servicio 2 */}
-          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-br-4xl rounded-tl-4xl shadow-md overflow-hidden border border-white/20">
+            <div className="h-45 w-full overflow-hidden p-0">
+              <img
+                src="./imagenes/card2.jpg"
+                alt="Prácticas Corporales"
+                className="w-full h-full object-cover rounded-tl-4xl rounded-br-3xl hover:scale-105 "
+              />
+            </div>
+            <div className="relative w-full h-35 -mt-35">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent  via-emerald-900/30 to-[#0a1f1c] w-full h-full z-30"></div>
+            </div>
             <div className="p-6">
+              {/* Div de transición con degradado */}
               <h3 className="text-xl font-semibold text-white mb-2">
-                Acompañamiento Personal
+                Asesoría personal
               </h3>
-              <p className="text-slate-300">
-                ● Coaching de bienestar integral <br></br>● Acompañamiento en
-                crisis vitales <br></br>● Programa de Reducción de Estrés
+              <p className="text-slate-300 text-m">
+                ● Coaching de bienestar <br></br>● Acompañamiento en crisis{" "}
+                <br></br>● Programa para reducir estrés
               </p>
             </div>
           </div>
 
           {/* Tarjeta de servicio 3 */}
-          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-br-4xl rounded-tl-4xl shadow-md overflow-hidden border border-white/20">
+            <div className="h-45 w-full overflow-hidden p-0">
+              <img
+                src="./imagenes/card3.jpg"
+                alt="Prácticas Corporales"
+                className="w-full h-full object-cover rounded-tl-4xl rounded-br-3xl hover:scale-105 "
+              />
+            </div>
+            {/* Div de transición con degradado */}
+            <div className="relative w-full h-35 -mt-35">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent  via-emerald-900/30 to-[#0a1f1c] w-full h-full z-30"></div>
+            </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold text-white mb-2">
                 Prácticas Devocionales
@@ -53,13 +101,25 @@ export default function Home() {
           </div>
 
           {/* Tarjeta de servicio 4 */}
-          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-lg shadow-md overflow-hidden border border-white/20">
+          <div className="glass-card bg-white/10 backdrop-blur-sm rounded-br-4xl rounded-tl-4xl shadow-md overflow-hidden border border-white/20">
+            <div className="h-45 w-full overflow-hidden p-0">
+              <img
+                src="./imagenes/card4.jpg"
+                alt="Prácticas Corporales"
+                className="w-full h-full object-cover rounded-tl-4xl rounded-br-3xl hover:scale-105 "
+              />
+            </div>
+            {/* Div de transición con degradado */}
+            <div className="relative w-full h-35 -mt-35">
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent  via-amber-700/30 to-[#0a1f1c] w-full h-full z-30"></div>
+            </div>
             <div className="p-6">
               <h3 className="text-xl font-semibold text-white mb-2">
-                Conocimiento y Filosofía
+                Conocimiento filosófico
               </h3>
               <p className="text-slate-300">
-                ● Talleres de filosofía yóguica <br></br> ● Introducción al Ayurveda <br></br>
+                ● Talleres de filosofía yóguica <br></br> ● Introducción al
+                Ayurveda <br></br>
                 ●Psicología Positiva y Holística
               </p>
             </div>

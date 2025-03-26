@@ -35,11 +35,11 @@ const Navbar = () => {
         </Link>
 
         {/* Menú para desktop */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 justify-center w-full">
           <Link href="/" className="text-white hover:text-blue-300 transition-colors">
             Inicio
           </Link>
-          <Link href="/servicios" className="text-white hover:text-blue-300 transition-colors">
+          <Link href="#servicios" className="text-white hover:text-blue-300 transition-colors">
             Servicios
           </Link>
           <Link href="/acerca" className="text-white hover:text-blue-300 transition-colors">
