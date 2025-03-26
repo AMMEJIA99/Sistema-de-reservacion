@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
+import { NavbarDemo } from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { useEffect, useRef, useState } from "react";
 import { Lamp } from "@/components/features/lamp";
@@ -7,7 +7,7 @@ import { Lamp } from "@/components/features/lamp";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <NavbarDemo/>
       <HeroSection />
 
       {/* Sección de servicios con fondo ajustado para el componente Lamp */}

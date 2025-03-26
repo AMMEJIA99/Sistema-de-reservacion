@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import SplineScene from "./SplineScene";
 import { AnimatedModalDemo } from "./features/hero";
 
 const HeroSection = () => {
@@ -28,16 +27,14 @@ const HeroSection = () => {
       className="relative w-full overflow-hidden"
       style={{ height: "100vh" }}
     >
-      <div className="absolute inset-0" style={{ height: "100%" }}>
-        <SplineScene
-          modelPath="/lotus.glb"
-          scale={2}
-          position={[0, -1, 0]}
-          rotation={[0, 0, 0]}
-          showStars={true}
-          environmentPreset="sunset"
-        />
-      </div>
+      {/* Imagen de fondo en lugar de Vanta */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/imagenes/fondo.jpg')", // Nombre de la imagen de fondo
+          height: "100vh",
+        }}
+      ></div>
 
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"></div>
 
